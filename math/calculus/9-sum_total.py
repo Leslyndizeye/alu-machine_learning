@@ -1,22 +1,22 @@
 #!/usr/bin/env python3
-'''A function that calculates as Sigma notation'''
+"""
+Summation of squared values
+"""
 
 
 def summation_i_squared(n):
+    """ Sum i squared
 
-    '''
-    Calculates the sigma squared of an input with a limit.
-
-    Parameters:
-    - n (int): The stopping condition for the sum.
-
-    Returns:
-    - int or None: The interger value of the sum. Returns None if
-                   n is not a valid number
-    '''
-    if not isinstance(n, int) or n < 0:
+    Args:
+        n (_type_): _description_
+    """
+    if n == 1:
+        return 1
+    if n < 1:
         return None
+    else:
+        result = (n*(n+1)*(2*n+1))//6
+        return result
 
-    result = n * (n + 1) * (2 * n + 1) // 6
 
-    return result
+# print(summation_i_squared(5))
