@@ -1,17 +1,21 @@
 #!/usr/bin/env python3
 """
-    Return the list of names of the home
-    planets of all sentient species.
+Defines methods to ping the Star Wars API and return the list of home planets
+for all sentient species
 """
+
 
 import requests
 
 
 def sentientPlanets():
-    '''
-    Return the list of names of the home
-    planets of all sentient species.
-    '''
+    """
+    Uses the Star Wars API to return the list of home planets
+        for all sentient species
+
+    returns:
+        [list]: home planets of sentient species
+    """
     url = "https://swapi-api.hbtn.io/api/species/?format=json"
     speciesList = []
     while url:
